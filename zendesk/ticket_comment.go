@@ -16,6 +16,8 @@ type TicketComment struct {
 	Public      bool         `json:"public,omitempty"`
 	AuthorID    int64        `json:"author_id"`
 	Attachments []Attachment `json:"attachments,omitempty"`
+	// for upload tokens when creating/updating a ticket
+	Uploads []string `json:"uploads,omitempty"`
 	// TODO: Via
 	// TODO: metadata: comment flags
 	CreatedAt time.Time `json:"created_at"`
