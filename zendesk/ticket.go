@@ -68,7 +68,8 @@ type Ticket struct {
 //       Need to make it into correct TicketComment structure.
 //       https://developer.zendesk.com/rest_api/docs/support/ticket_comments
 type TicketComment struct {
-	Body string `json:"body"`
+	Body    string   `json:"body"`
+	Uploads []string `json:"uploads,omitempty"`
 }
 
 type TicketListOptions struct {
